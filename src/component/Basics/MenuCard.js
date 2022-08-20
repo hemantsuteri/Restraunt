@@ -4,13 +4,13 @@ function MenuCard(props)
 { 
   // ({ props.content }) => {
    
-  console.log(props.content);
+
 
   return (
     <>
       <section className="main-card--container">
         {props.content.map((curElem) => {
-          const { id, image, name, category, price, description } = curElem;
+          const { id, image, name, category, price, description } = curElem; //destructuring   
 
           return (
             <>
