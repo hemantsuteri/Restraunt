@@ -1,16 +1,13 @@
 import React from "react";
 
-function MenuCard(props) 
-{ 
-  // ({ props.content }) => {
-   
-
+const MenuCard = ({ menuData }) => {
+  //   console.log(menuData);
 
   return (
     <>
-      <section className="main-card--container">
-        {props.content.map((curElem) => {
-          const { id, image, name, category, price, description } = curElem; //destructuring   
+      <section className="main-card--cointainer">
+        {menuData.map((currElem) => {
+          const { id, name, category, image, description } = currElem;
 
           return (
             <>
@@ -36,10 +33,60 @@ function MenuCard(props)
       </section>
     </>
   );
-}
-// };
+};
 
 export default MenuCard;
+
+
+
+
+
+
+
+
+
+// import React from "react";
+
+// function MenuCard(props) 
+// { 
+//   // ({ props.content }) => {
+   
+
+
+//   return (
+//     <>
+//       <section className="main-card--container">
+//         {props.content.map((curElem) => {
+//           const { id, image, name, category, price, description } = curElem; //destructuring   
+
+//           return (
+//             <>
+//               <div className="card-container" key={id}>
+//                 <div className="card ">
+//                   <div className="card-body">
+//                     <span className="card-number card-circle subtle">{id}</span>
+//                     <span className="card-author subtle"> {category}</span>
+//                     <h2 className="card-title"> {name} </h2>
+//                     <span className="card-description subtle">
+//                       {description}
+//                     </span>
+//                     <div className="card-read">Read</div>
+//                   </div>
+//                   <img src={image} alt="images" className="card-media" />
+
+//                   <span className="card-tag  subtle">Order Now</span>
+//                 </div>
+//               </div>
+//             </>
+//           );
+//         })}
+//       </section>
+//     </>
+//   );
+// }
+// // };
+
+// export default MenuCard;
 
 
 
